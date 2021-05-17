@@ -17,8 +17,6 @@ def receivingMsg(conn):
 recievThread = Thread(target=receivingMsg, args=(client,))
 recievThread.daemon = True
 recievThread.start()
-msg = client.recv(128).decode('utf-8')
-print(msg)
 
 while True:
     msg = "Client@ "
